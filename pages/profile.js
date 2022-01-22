@@ -16,7 +16,7 @@ import { ReactElement } from 'react';
 import NextLink from 'next/link';
 import { motion } from 'framer-motion';
 import Nav from '../src/components/Nav';
-import { ProjectDetailToHome } from '../src/components/ProjectDetailToHome';
+import { ProjectDetailToHomeIcon } from '../src/components/ProjectDetailToHomeIcon';
 import { profilePageData } from '../src/data/profilePageData';
 import * as icons from 'react-icons/si';
 import Layout from '../src/components/Layout';
@@ -58,7 +58,6 @@ export default function ProfilePage() {
         transition={{duration: 1.5}}
         >
         <Container maxW="2x1" p={0}>
-            <Nav />
           <Container maxW={'5xl'} py={12}>
             <SimpleGrid columns={{ base: 1, md: 2 }} spacing={10}>
               <Stack spacing={4}>
@@ -141,10 +140,10 @@ export default function ProfilePage() {
               </Flex>
             </SimpleGrid>
           </Container>
-          <Flex justifyContent={'center'}>
+          <Flex justifyContent={'center'} pb={30}>
             <NextLink href='/' passHref>
               <Link>
-                <ProjectDetailToHome />
+                <ProjectDetailToHomeIcon />
               </Link>
             </NextLink>
           </Flex>

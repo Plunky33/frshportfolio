@@ -1,6 +1,6 @@
 import React from 'react';
 import { useSpring } from 'react-spring';
-import { usePrefersReducedMotion } from '../Hooks/usePrefersReducedMotion';
+import { usePrefersReducedMotion } from './usePrefersReducedMotion';
 
 // boopConfig defaults
 function useBoop({

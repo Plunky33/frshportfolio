@@ -24,7 +24,7 @@ export const ProjectsToHome = () => {
         transition={{ duration: 1.3 }}
       >
 		  	<Flex justifyContent='space-between' alignItems='flex-end' pr={[12, 12, 12, 0, 0]}>
-			  	<Text fontFamily="fonts.body" size='lg' fontSize='50px' mt={4} mb={-5} pl={[14, 14, 14, 2, 2]}>Projects</Text>
+			  	<Text fontFamily="Open Sans" size='lg' fontSize='50px' mt={4} mb={-5} pl={[14, 14, 14, 2, 2]}>Projects</Text>
 				<IconButton onClick={toggleButton}>
 					<ChevronIcon />
 				</IconButton>

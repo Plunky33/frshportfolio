@@ -21,7 +21,7 @@ import { motion } from 'framer-motion';
 import { useButtonUpdate } from '../../context/ButtonContext';
 import NextLink from 'next/link';
 import Nav from '../../src/components/Nav';
-import { ProjectDetailToHome } from '../../src/components/ProjectDetailToHome';
+import { ProjectDetailToHome } from '../../src/components/ProjectDetailToHomeIcon';
 import { projectData } from '../../src/data/projectData';
 import * as icons from 'react-icons/si';
 import Layout from '../../src/components/Layout';
@@ -73,7 +73,7 @@ export default function ProjectPage({project, gallery}) {
               rounded={'md'}>
               Project Overview
             </Text>
-            <Heading>{project.title}</Heading>
+            <Heading fontFamily="Open Sans">{project.title}</Heading>
             <Text
               _hover={{ color: "purple.500" }}
               _focus={{ boxShadow: "outline" }}
@@ -124,15 +124,15 @@ export default function ProjectPage({project, gallery}) {
             />
           </Flex>
         </SimpleGrid>
-        <SimpleGrid columns={{ base: 1, md: 1 }} spacing={10} py={30}>
+        <SimpleGrid columns={{ base: 1, md: 1 }} spacing={15} py={35}>
             <Flex>
               <Text color={'gray.500'} fontSize={'lg'}>
                 {project.description}
               </Text>
             </Flex>
             <Flex>
-                <SimpleGrid minChildWidth='120px' spacing='40px'>
-                {gallery.map((item, i) => (
+                <SimpleGrid minChildWidth='120px' spacing='40px' py={15}>
+                  {gallery.map((item, i) => (
                     <MotionBox
                       key={item.id}
                       as={motion.div}
@@ -159,7 +159,7 @@ export default function ProjectPage({project, gallery}) {
                 ))}
                 </SimpleGrid>
             </Flex>
-            <Flex justifyContent={'center'}>
+            <Flex justifyContent={'center'} mt={-5}>
               <NextLink href='/' passHref>
                 <Link>
                   <ProjectDetailToHome />

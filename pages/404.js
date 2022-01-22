@@ -1,6 +1,6 @@
 import Link from 'next/link'
 import Layout from '../src/components/Layout'
-import { Box, Flex, Text } from '@chakra-ui/react';
+import { Box, Flex, Heading, Text } from '@chakra-ui/react';
 import { motion } from 'framer-motion';
 
 const MotionBox = motion(Box)
@@ -16,12 +16,12 @@ export default function NotFoundPage() {
             transition={{duration: 1.5}}
           >
             <Link href="/" passHref>
-                <Text
+                <Heading
                   fontFamily="Blackout Sunrise"
                   size='lg'
                   fontSize='80px'
                   css={{cursor: 'pointer'}}
-                >Page Not Found</Text>
+                >Page Not Found</Heading>
             </Link>
           </MotionBox>
           </Flex>

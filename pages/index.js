@@ -1,13 +1,12 @@
 import { Container, Stack, Divider, Flex, Box, useMediaQuery } from '@chakra-ui/react';
 import { motion } from 'framer-motion';
-import HomeButton from '../src/sections/homebutton';
-import Profile from '../src/sections/profile';
+import { Home } from '../src/sections/home';
+import { ProfileList } from '../src/sections/profilelist';
 import Layout from '../src/components/Layout'
 
 const MotionBox = motion(Box)
 
 const IndexPage = () => {
-
   return (
     <Layout>
       <MotionBox
@@ -21,10 +20,10 @@ const IndexPage = () => {
               spacing="50px"
         >
             <Box w={["100%", "100%", "100%", "50%"]}>
-              <Profile />
+              <ProfileList />
             </Box>
             <Box w={["100%", "100%", "100%", "50%"]} mr={[0, 0, 0, "3rem !important", "3rem !important"]}>
-              <HomeButton />
+              <Home />
             </Box>
         </Stack>
       </MotionBox>

@@ -5,7 +5,6 @@ import { ChevronIcon } from './ChevronIcon';
 
 const MotionBox = motion(Box);
 
-
 const IconButton = styled.div`
 	cursor: pointer;
 	display: flex;
@@ -13,7 +12,7 @@ const IconButton = styled.div`
 	padding-bottom: 0.25rem;
 `
 
-export const ProjectDetailToHome = () => {
+export const ProjectDetailToHomeIcon = () => {
 	return (
 		<MotionBox
         as={motion.div}

@@ -1,7 +1,7 @@
 import { Box, Heading, Text } from '@chakra-ui/react';
 import { profileData } from '../data/profileData';
 
-const Profile = () => {
+export const ProfileList = () => {
 	return (
 		<Box
 			w="full"
@@ -25,13 +25,11 @@ const Profile = () => {
 		>
 			{profileData.map( item => (
 				<Box key={item.id} p={5} shadow='md' borderWidth='1px' w="full" my={10}>
-					<Heading fontFamily="Mulish" fontSize='2xl'>{item.name}</Heading>
-					<Text fontFamily="fonts.body" mt={4}>{item.desc}</Text>
+					<Heading fontFamily="Open Sans" fontSize='2xl'>{item.name}</Heading>
+					<Text fontFamily="Lato" mt={4}>{item.desc}</Text>
 				</Box>
 				)
 			)}
 		</Box>
 	)
-};
-
-export default Profile;
+}
