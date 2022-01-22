@@ -1,11 +1,7 @@
-import React, { useContext, useState } from "react"
+import React, { useContext, useState } from "react";
 
-interface ContextProps {
-  // defaultValue: null
-}
-
-const ButtonContext = React.createContext<ContextProps | null>(null)
-const ButtonUpdateContext = React.createContext<ContextProps | null>(null)
+const ButtonContext = React.createContext()
+const ButtonUpdateContext = React.createContext()
 
 export function useButton() {
   return useContext(ButtonContext)
@@ -15,7 +11,7 @@ export function useButtonUpdate() {
   return useContext(ButtonUpdateContext)
 }
 
-export function ButtonProvider ( { children }:{children: any} ) {
+export function ButtonProvider ({ children }) {
   const [renderProjects, setRenderProjects] = useState(false);
   console.log('renderProjects', renderProjects);
 
