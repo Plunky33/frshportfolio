@@ -40,7 +40,7 @@ const Feature = ({ text, icon, iconBg }) => {
   );
 };
 
-export default function SplitWithImage() {
+export default function ProfilePage() {
   const project = profilePageData[0]
   const iconone = icons[`${project.iconone}`]
   const icontwo = icons[`${project.icontwo}`]

@@ -48,7 +48,6 @@ const Feature = ({ text, icon, iconBg}) => {
 export default function ProjectPage({project, gallery}) {
 	const toggleButton = useButtonUpdate();
   // const [isSmallerScreen] = useMediaQuery("(max-width: 768px)");
-  console.log(project.iconone);
   const iconone = icons[`${project.iconone}`]
   const icontwo = icons[`${project.icontwo}`]
   const iconthree = icons[`${project.iconthree}`]
@@ -60,7 +59,6 @@ export default function ProjectPage({project, gallery}) {
             exit={{ opacity: 0}}
             transition={{duration: 1.5}}
       >
-      <Nav />
       <Container maxW={'5xl'} py={6} p={[6, 8, 6, 8]}>
         <SimpleGrid columns={{ base: 1, md: 2 }} spacing={10}>
           <Stack spacing={4}>

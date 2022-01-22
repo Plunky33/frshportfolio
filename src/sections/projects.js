@@ -74,8 +74,8 @@ const Projects = () => {
         // sx={{marginTop: "-0.45rem"}}
         // mt={[0, 0, 0, "15rem !important"]}
     >
-    <ProjectsToHome />
-    <GridItem />
+      <ProjectsToHome />
+      <GridItem />
   </MotionBox>
   )
 }

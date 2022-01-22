@@ -1,14 +1,22 @@
 import Head from 'next/head';
+import Nav from '../../src/components/Nav'
+import { Container } from '@chakra-ui/react';
 
 export default function Layout({title, keywords, description, children}) {
-  return <div>
-      <Head>
-          <title>{title}</title>
-          <meta name="description" content={description}></meta>
-          <meta name="keywords" content={keywords}></meta>
-      </Head>
-      {children}
-  </div>
+  return (
+        <>
+            <Head>
+                <title>{title}</title>
+                <meta name="description" content={description}></meta>
+                <meta name="keywords" content={keywords}></meta>
+            </Head>
+
+            <Container maxW="2x1" p={0}>
+                <Nav />
+                {children}
+            </Container>
+        </>
+  )
 }
 
 Layout.defaultProps = {
