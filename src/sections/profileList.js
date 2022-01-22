@@ -1,6 +1,7 @@
 import { Box, Heading, Text } from '@chakra-ui/react';
 import { profileData } from '../data/profileData';
 
+
 export const ProfileList = () => {
 	return (
 		<Box
@@ -25,8 +26,8 @@ export const ProfileList = () => {
 		>
 			{profileData.map( item => (
 				<Box key={item.id} p={5} shadow='md' borderWidth='1px' w="full" my={10}>
-					<Heading fontFamily="Open Sans" fontSize='2xl'>{item.name}</Heading>
-					<Text fontFamily="Lato" mt={4}>{item.desc}</Text>
+					<Heading fontFamily="heading" fontSize='2xl'>{item.name}</Heading>
+					<Text fontFamily="body" mt={4}>{item.desc}</Text>
 				</Box>
 				)
 			)}

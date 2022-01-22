@@ -2,21 +2,21 @@ import Link from 'next/link';
 import { Box, Img, Grid, useColorModeValue } from '@chakra-ui/react';
 import { motion } from 'framer-motion';
 
-import { ProjectsToHome } from '../components/ProjectGalleryToHomeIcon';
+import { ProjectGalleryToHomeIcon } from '../components/ProjectGalleryToHomeIcon';
 import { projectData } from '../data/projectData';
 
 const MotionBox = motion(Box);
 
-const postVariants = {
-  initial: { scale: 0.96, y: 30, opacity: 0 },
-  enter: { scale: 1, y: 0, opacity: 1, transition: { duration: 0.5, ease: [0.48, 0.15, 0.25, 0.96] } },
-  exit: {
-    scale: 0.6,
-    y: 100,
-    opacity: 0,
-    transition: { duration: 0.2, ease: [0.48, 0.15, 0.25, 0.96] }
-  }
-};
+// const postVariants = {
+//   initial: { scale: 0.96, y: 30, opacity: 0 },
+//   enter: { scale: 1, y: 0, opacity: 1, transition: { duration: 0.5, ease: [0.48, 0.15, 0.25, 0.96] } },
+//   exit: {
+//     scale: 0.6,
+//     y: 100,
+//     opacity: 0,
+//     transition: { duration: 0.2, ease: [0.48, 0.15, 0.25, 0.96] }
+//   }
+// };
 
 const GridItem = () => {
   const bgColor = useColorModeValue('gray.50', 'whiteAlpha.50');
@@ -38,8 +38,8 @@ const GridItem = () => {
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           exit={{ opacity: 0 }}
-          // transition={{ duration: 0.3, delay: i * 0.45 }}
-          variants={postVariants}
+          transition={{ duration: 0.3, delay: i * 0.45 }}
+          // variants={postVariants}
         >
           <Link href={`/projects/${encodeURIComponent(project.slug)}`} passHref>
             <Img
@@ -72,7 +72,7 @@ export const Projects = () => {
 				transition={{ duration: 0.5 }}
         my={10}
     >
-      <ProjectsToHome />
+      <ProjectGalleryToHomeIcon />
       <GridItem />
   </MotionBox>
   )

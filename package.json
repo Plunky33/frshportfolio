@@ -15,6 +15,7 @@
     "@emotion/react": "^11",
     "@emotion/styled": "^11",
     "@fontsource/blackout-sunrise": "^4.5.0",
+    "@fontsource/ibm-plex-sans": "^4.5.1",
     "@fontsource/lato": "^4.5.0",
     "@fontsource/mulish": "^4.5.2",
     "@fontsource/open-sans": "^4.5.2",

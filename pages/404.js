@@ -3,6 +3,9 @@ import Layout from '../src/components/Layout'
 import { Box, Flex, Heading, Text } from '@chakra-ui/react';
 import { motion } from 'framer-motion';
 
+import customTheme from '../src/theme/customTheme'
+
+
 const MotionBox = motion(Box)
 
 export default function NotFoundPage() {
@@ -17,7 +20,7 @@ export default function NotFoundPage() {
           >
             <Link href="/" passHref>
                 <Heading
-                  fontFamily="Blackout Sunrise"
+                  fontFamily="mono"
                   size='lg'
                   fontSize='80px'
                   css={{cursor: 'pointer'}}
