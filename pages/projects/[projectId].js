@@ -21,7 +21,7 @@ import { motion } from 'framer-motion';
 import { useButtonUpdate } from '../../context/ButtonContext';
 import NextLink from 'next/link';
 import Nav from '../../src/components/Nav';
-import { ProjectDetailToHome } from '../../src/components/ProjectDetailToHomeIcon';
+import { ProjectDetailToHomeIcon } from '../../src/components/ProjectDetailToHomeIcon';
 import { projectData } from '../../src/data/projectData';
 import * as icons from 'react-icons/si';
 import Layout from '../../src/components/Layout';
@@ -162,7 +162,7 @@ export default function ProjectPage({project, gallery}) {
             <Flex justifyContent={'center'} mt={-5}>
               <NextLink href='/' passHref>
                 <Link>
-                  <ProjectDetailToHome />
+                  <ProjectDetailToHomeIcon />
                 </Link>
               </NextLink>
             </Flex>
