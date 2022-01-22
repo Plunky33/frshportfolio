@@ -1634,6 +1634,11 @@
     minimatch "^3.0.4"
     strip-json-comments "^3.1.1"
 
+"@fontsource/blackout-sunrise@^4.5.0":
+  version "4.5.0"
+  resolved "https://registry.yarnpkg.com/@fontsource/blackout-sunrise/-/blackout-sunrise-4.5.0.tgz#d8426632ee685e694bfb826e15b6cfc587903b84"
+  integrity sha512-BvR91qFO+J3uJOPn1pG4IXtd3JjyalmRB1fLnkf+lC8Vw9nlygB5AdamKtV2WUWUYUK3MyMQLV21xJj3uZr9Sg==
+
 "@fontsource/ibm-plex-sans@^4.5.1":
   version "4.5.1"
   resolved "https://registry.yarnpkg.com/@fontsource/ibm-plex-sans/-/ibm-plex-sans-4.5.1.tgz#0aff4e48f470c1647c180255495d91a28b0a50e6"

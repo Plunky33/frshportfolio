@@ -1,6 +1,7 @@
 import { extendTheme } from '@chakra-ui/react';
-import "@fontsource/ibm-plex-sans";
+// import "@fontsource/ibm-plex-sans";
 // import "@fontsource/inter";
+import "@fontsource/blackout-sunrise"
 import "@fontsource/lato"
 import "@fontsource/mulish"
 
@@ -8,7 +9,7 @@ export const theme = extendTheme({
     fonts: {
       heading: 'Mulish, -apple-system, "system-ui", "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol"',
       body: 'Lato, -apple-system, "system-ui", "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol"',
-      fourohfour: 'IBM Plex Sans, -apple-system, "system-ui", "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol"'
+      fourohfour: 'Blackout Sunrise, -apple-system, "system-ui", "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol"'
     },
     components: {
       Stack: {

@@ -16,7 +16,12 @@ export default function NotFoundPage() {
             transition={{duration: 1.5}}
           >
             <Link href="/" passHref>
-                <Text fontFamily="IBM Plex Sans" size='lg' fontSize='80px'>Page Not Found</Text>
+                <Text
+                  fontFamily="Blackout Sunrise"
+                  size='lg'
+                  fontSize='80px'
+                  css={{cursor: 'pointer'}}
+                >Page Not Found</Text>
             </Link>
           </MotionBox>
           </Flex>

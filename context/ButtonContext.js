@@ -13,12 +13,10 @@ export function useButtonUpdate() {
 
 export function ButtonProvider ({ children }) {
   const [renderProjects, setRenderProjects] = useState(false);
-  console.log('renderProjects', renderProjects);
 
   function toggleButton() {
     setRenderProjects(prevRenderProjects => !prevRenderProjects);
   }
-
 
   return (
     <ButtonContext.Provider value={renderProjects}>
