@@ -5,7 +5,7 @@ import {
   Flex,
   Avatar,
   Link,
-  Img,
+  Image,
   Button,
   Menu,
   MenuButton,
@@ -65,8 +65,15 @@ export default function Nav() {
                   minW={0}
                   aria-label="Menu Button for Profile Menu"
                   >
-                  <Avatar
-                    size={'sm'}
+                  {/* <Image alt="John Milner Profile Photo">
+                    <Avatar
+                      size={'sm'}
+                      src={ProfilePic}
+                    />
+                  </Image> */}
+                  <Image
+                    borderRadius='full'
+                    boxSize='35px'
                     src={ProfilePic}
                     alt="John Milner Profile Photo"
                   />
@@ -74,8 +81,15 @@ export default function Nav() {
                 <MenuList alignItems={'center'}>
                   <br />
                   <Center>
-                    <Avatar
-                      size={'2xl'}
+                    {/* <Image alt="John Milner Profile Photo">
+                      <Avatar
+                        size={'2xl'}
+                        src={ProfilePic}
+                      />
+                    </Image> */}
+                    <Image
+                      borderRadius='full'
+                      boxSize='120px'
                       src={ProfilePic}
                       alt="John Milner Profile Photo"
                     />
