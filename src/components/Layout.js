@@ -10,17 +10,27 @@ export default function Layout({title, keywords, description, children}) {
                 <meta name="description" content={description}></meta>
                 <meta name="keywords" content={keywords}></meta>
                 <meta name='language' content='EN'></meta>
-                <meta name='robots' content='index,follow'></meta>
-
-                <meta name="viewport" content="width=device-width, initial-scale=1" />
-
-                <meta property="og:title" content={description} />
-                <meta property="og:type" content={description} />
-                <meta property="og:url" content={description} />
-                <meta property="og:image" content={description} />
-
-                {/* <link rel="manifest" href="site.webmanifest" /> */}
-                {/* <link rel="apple-touch-icon" href="icon.png" /> */}
+                <link rel="canonical" href="" />
+                <meta name="robots" content="all" />
+                <meta name="twitter:card" content="summary" />
+                <meta name="twitter:site" content="@AriBenoist" />
+                <meta name="twitter:creator" content="@AriBenoist" />
+                <meta name="twitter:title" content="Aristide Benoist — Freelance developer" />
+                <meta name="twitter:description" content="Aristide Benoist is a developer who specializes in motion and interaction. As a freelancer, he works with companies, agencies, startups and individuals all over the world." />
+                <meta name="twitter:image" content="" />
+                <meta property="og:type" content="website" />
+                <meta property="og:url" content="" />
+                <meta property="og:title" content="Aristide Benoist — Freelance developer" />
+                <meta property="og:description" content="Aristide Benoist is a developer who specializes in motion and interaction. As a freelancer, he works with companies, agencies, startups and individuals all over the world." />
+                <meta property="og:image" content="" />
+                <meta property="og:image:width" content="1200" />
+                <meta property="og:image:height" content="630" />
+                <link rel="icon" href="" />
+                <link rel="mask-icon" href="" color="#0B0C0C" />
+                <link rel="alternate icon" href="" />
+                <link rel="apple-touch-icon" href="" />
+                <link crossorigin="use-credentials" rel="manifest" href="" />
+                <meta name="theme-color" content="#171717"></meta>
             </Head>
 
             <Container maxW="2x1" p={0}>
