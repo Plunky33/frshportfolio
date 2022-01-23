@@ -49,7 +49,10 @@ export default function Nav() {
 
           <Flex alignItems={'center'}>
             <Stack direction={'row'} spacing={7}>
-            <Button onClick={toggleColorMode}>
+            <Button
+              onClick={toggleColorMode}
+              aria-label="Menu Button for Light Dark Toggle"
+            >
             {colorMode === 'light' ? <MoonIcon /> : <SunIcon />}
             </Button>
 
@@ -59,10 +62,13 @@ export default function Nav() {
                   rounded={'full'}
                   variant={'link'}
                   cursor={'pointer'}
-                  minW={0}>
+                  minW={0}
+                  aria-label="Menu Button for Profile Menu"
+                  >
                   <Avatar
                     size={'sm'}
                     src={ProfilePic}
+                    alt="John Milner Profile Photo"
                   />
                 </MenuButton>
                 <MenuList alignItems={'center'}>
@@ -71,6 +77,7 @@ export default function Nav() {
                     <Avatar
                       size={'2xl'}
                       src={ProfilePic}
+                      alt="John Milner Profile Photo"
                     />
                   </Center>
                   <br />

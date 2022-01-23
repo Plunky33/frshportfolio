@@ -9,6 +9,18 @@ export default function Layout({title, keywords, description, children}) {
                 <title>{title}</title>
                 <meta name="description" content={description}></meta>
                 <meta name="keywords" content={keywords}></meta>
+                <meta name='language' content='EN'></meta>
+                <meta name='robots' content='index,follow'></meta>
+
+                <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+                <meta property="og:title" content={description} />
+                <meta property="og:type" content={description} />
+                <meta property="og:url" content={description} />
+                <meta property="og:image" content={description} />
+
+                {/* <link rel="manifest" href="site.webmanifest" /> */}
+                {/* <link rel="apple-touch-icon" href="icon.png" /> */}
             </Head>
 
             <Container maxW="2x1" p={0}>
