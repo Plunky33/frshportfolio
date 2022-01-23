@@ -29,7 +29,7 @@ export default function Layout({title, keywords, description, children}) {
                 <link rel="mask-icon" href="" color="#0B0C0C" />
                 <link rel="alternate icon" href="" />
                 <link rel="apple-touch-icon" href="" />
-                <link crossorigin="use-credentials" rel="manifest" href="" />
+                <link crossOrigin="use-credentials" rel="manifest" href="" />
                 <meta name="theme-color" content="#171717"></meta>
             </Head>
 
