@@ -1,5 +1,3 @@
-import '@fontsource/raleway/400.css'
-import '@fontsource/open-sans/700.css'
 import "@fontsource/blackout-sunrise"
 import "@fontsource/lato"
 import "@fontsource/ibm-plex-sans/400.css"
