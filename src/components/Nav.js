@@ -63,14 +63,12 @@ export default function Nav() {
                   variant={'link'}
                   cursor={'pointer'}
                   minW={0}
-                  alt="Button for Profile Menu"
                   aria-label="Menu Button for Profile Menu"
                   >
                   <Avatar
                     size={'sm'}
                     src={ProfilePic}
                     alt="John Milner Profile Photo"
-                    aria-label="John Milner Profile Photo"
                   />
                 </MenuButton>
                 <MenuList alignItems={'center'}>
@@ -80,7 +78,6 @@ export default function Nav() {
                       size={'2xl'}
                       src={ProfilePic}
                       alt="John Milner Profile Photo"
-                      aria-label="John Milner Profile Photo"
                     />
                   </Center>
                   <br />
