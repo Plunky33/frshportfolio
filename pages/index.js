@@ -1,8 +1,10 @@
+import dynamic from "next/dynamic";
 import { Container, Stack, Divider, Flex, Box, useMediaQuery } from '@chakra-ui/react';
 import { motion } from 'framer-motion';
 import Home from '../src/sections/home';
-import ProfileList from '../src/sections/profileList';
-import Layout from '../src/components/Layout'
+
+const ProfileList = dynamic(() => import('../src/sections/profileList'))
+const Layout = dynamic(() => import('../src/components/Layout'))
 
 const MotionBox = motion(Box)
 

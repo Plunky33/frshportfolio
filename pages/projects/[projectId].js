@@ -1,3 +1,4 @@
+import dynamic from "next/dynamic";
 import {
   Container,
   SimpleGrid,
@@ -20,11 +21,11 @@ import {
 import { motion } from 'framer-motion';
 import { useButtonUpdate } from '../../context/ButtonContext';
 import NextLink from 'next/link';
-import ProjectDetailToHomeIcon from '../../src/components/ProjectDetailToHomeIcon';
 import { projectData } from '../../src/data/projectData';
 import * as icons from 'react-icons/si';
 import Layout from '../../src/components/Layout';
 
+const ProjectDetailToHomeIcon = dynamic(() => import('../../src/components/ProjectDetailToHomeIcon'))
 const MotionBox = motion(Box)
 
 const Feature = ({ text, icon, iconBg}) => {

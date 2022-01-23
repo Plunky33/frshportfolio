@@ -1,7 +1,10 @@
+import dynamic from "next/dynamic";
+
 import { useButton, useButtonUpdate } from '../../context/ButtonContext';
 import { Box } from '@chakra-ui/react';
-import BrowseButton from '../components/BrowseButton'
-import Projects from './projects';
+
+const BrowseButton = dynamic(() => import('../components/BrowseButton'))
+const Projects = dynamic(() => import('./projects'))
 
 export default function Home() {
 	const renderProjects = useButton();

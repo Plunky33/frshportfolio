@@ -1,8 +1,10 @@
 import { Box, Flex, Text } from '@chakra-ui/react';
+import dynamic from "next/dynamic";
 import styled from 'styled-components';
 import { motion } from 'framer-motion';
 import { useButtonUpdate } from '../../context/ButtonContext';
-import ChevronIcon from './ChevronIcon';
+
+const ChevronIcon = dynamic(() => import('./ChevronIcon'))
 
 
 const MotionBox = motion(Box);
