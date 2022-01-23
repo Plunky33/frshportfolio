@@ -3,7 +3,7 @@ import { motion } from 'framer-motion';
 
 const MotionBox = motion(Box)
 
-export const BrowseButton = (props) => {
+export default function BrowseButton(props) {
     return (
         <MotionBox
             as={motion.div}

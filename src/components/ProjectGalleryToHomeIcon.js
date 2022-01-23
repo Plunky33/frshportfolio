@@ -2,7 +2,7 @@ import { Box, Flex, Text } from '@chakra-ui/react';
 import styled from 'styled-components';
 import { motion } from 'framer-motion';
 import { useButtonUpdate } from '../../context/ButtonContext';
-import { ChevronIcon } from './ChevronIcon';
+import ChevronIcon from './ChevronIcon';
 
 
 const MotionBox = motion(Box);
@@ -14,7 +14,7 @@ const IconButton = styled.div`
 	padding-bottom: 0.25rem;
 `
 
-export const ProjectGalleryToHomeIcon = () => {
+export default function ProjectGalleryToHomeIcon() {
 	const toggleButton = useButtonUpdate();
 	return (
 		<MotionBox

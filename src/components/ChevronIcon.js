@@ -1,10 +1,9 @@
 import React from 'react';
 import { ArrowBackIcon } from '@chakra-ui/icons';
-
 import useBoop from '../hooks/useBoop';
 import { animated } from 'react-spring';
 
-export const ChevronIcon = () => {
+export default function ChevronIcon () {
   const [style, trigger] = useBoop({
 		x: -5,
 		y: 0,

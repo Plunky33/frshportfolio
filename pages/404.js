@@ -3,8 +3,6 @@ import Layout from '../src/components/Layout'
 import { Box, Flex, Heading, Text } from '@chakra-ui/react';
 import { motion } from 'framer-motion';
 
-import customTheme from '../src/theme/customTheme'
-
 
 const MotionBox = motion(Box)
 

@@ -1,7 +1,7 @@
 import { Box, Flex, Text } from '@chakra-ui/react';
 import styled from 'styled-components';
 import { motion } from 'framer-motion';
-import { ChevronIcon } from './ChevronIcon';
+import ChevronIcon from './ChevronIcon';
 
 const MotionBox = motion(Box);
 
@@ -12,7 +12,7 @@ const IconButton = styled.div`
 	padding-bottom: 0.25rem;
 `
 
-export const ProjectDetailToHomeIcon = () => {
+export default function ProjectDetailToHomeIcon() {
 	return (
 		<MotionBox
         as={motion.div}

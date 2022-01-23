@@ -1,8 +1,7 @@
 import { Box, Heading, Text } from '@chakra-ui/react';
 import { profileData } from '../data/profileData';
 
-
-export const ProfileList = () => {
+export default function ProfileList() {
 	return (
 		<Box
 			w="full"

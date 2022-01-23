@@ -16,12 +16,11 @@ import {
 import {
   AiOutlineLink
 } from 'react-icons/ai';
-import { ReactElement } from 'react';
+// import { ReactElement } from 'react';
 import { motion } from 'framer-motion';
 import { useButtonUpdate } from '../../context/ButtonContext';
 import NextLink from 'next/link';
-import Nav from '../../src/components/Nav';
-import { ProjectDetailToHomeIcon } from '../../src/components/ProjectDetailToHomeIcon';
+import ProjectDetailToHomeIcon from '../../src/components/ProjectDetailToHomeIcon';
 import { projectData } from '../../src/data/projectData';
 import * as icons from 'react-icons/si';
 import Layout from '../../src/components/Layout';

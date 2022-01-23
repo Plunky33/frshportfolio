@@ -1,9 +1,9 @@
 import { useButton, useButtonUpdate } from '../../context/ButtonContext';
 import { Box } from '@chakra-ui/react';
-import { BrowseButton } from '../components/BrowseButton'
-import { Projects } from './projects';
+import BrowseButton from '../components/BrowseButton'
+import Projects from './projects';
 
-export const Home = () => {
+export default function Home() {
 	const renderProjects = useButton();
 	const toggleButton = useButtonUpdate();
 

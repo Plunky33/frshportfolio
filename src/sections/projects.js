@@ -2,7 +2,7 @@ import Link from 'next/link';
 import { Box, Img, Grid, useColorModeValue } from '@chakra-ui/react';
 import { motion } from 'framer-motion';
 
-import { ProjectGalleryToHomeIcon } from '../components/ProjectGalleryToHomeIcon';
+import ProjectGalleryToHomeIcon from '../components/ProjectGalleryToHomeIcon';
 import { projectData } from '../data/projectData';
 
 const MotionBox = motion(Box);
@@ -63,7 +63,7 @@ const GridItem = () => {
   )
 }
 
-export const Projects = () => {
+export default function Projects() {
   return (
     <MotionBox
 				initial={{ opacity: 0}}

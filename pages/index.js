@@ -1,7 +1,7 @@
 import { Container, Stack, Divider, Flex, Box, useMediaQuery } from '@chakra-ui/react';
 import { motion } from 'framer-motion';
-import { Home } from '../src/sections/home';
-import { ProfileList } from '../src/sections/profileList';
+import Home from '../src/sections/home';
+import ProfileList from '../src/sections/profileList';
 import Layout from '../src/components/Layout'
 
 const MotionBox = motion(Box)
