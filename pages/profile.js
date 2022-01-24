@@ -16,7 +16,6 @@ import {
 import NextLink from 'next/link';
 import { motion } from 'framer-motion';
 import { profilePageData } from '../src/data/profilePageData';
-import * as icons from 'react-icons/si';
 
 const ProfileSkills = dynamic(() => import('../src/components/ProfileSkills'))
 const Layout = dynamic(() => import('../src/components/Layout'))
@@ -43,12 +42,6 @@ const Feature = ({ text, icon, iconBg }) => {
 
 export default function ProfilePage() {
   const project = profilePageData[0]
-  const iconone = icons[`${project.iconone}`]
-  const icontwo = icons[`${project.icontwo}`]
-  const iconthree = icons[`${project.iconthree}`]
-  const iconfour = icons[`${project.iconfour}`]
-  const iconfive = icons[`${project.iconfive}`]
-  const iconsix = icons[`${project.iconsix}`]
 
   return (
       <Layout>
@@ -58,10 +51,10 @@ export default function ProfilePage() {
         exit={{ opacity: 0}}
         transition={{duration: 1.5}}
         >
-        <Container maxW="2x1" p={0}>
+        <Container maxW="2x1" mt={-6}>
           <Container maxW={'5xl'} py={12}>
             <SimpleGrid columns={{ base: 1, md: 2 }} spacing={10}>
-              <Stack spacing={4}>
+              <Stack py={3} spacing={4}>
                 <Text
                   textTransform={'uppercase'}
                   color={'blue.400'}
@@ -78,7 +71,7 @@ export default function ProfilePage() {
                 {project.description}
                 </Text>
               </Stack>
-              <Flex sx={{marginTop: '65px'}}>
+              <Flex mt={20} justifyContent={'center'}>
                 <Image
                   rounded={'md'}
                   alt={'feature image'}
@@ -90,13 +83,13 @@ export default function ProfilePage() {
             </SimpleGrid>
           </Container>
           <Container maxW={'5xl'}>
-          <Flex pr={15}>
-            <Heading>Current Stack:</Heading>
-          </Flex>
           <SimpleGrid columns={{ base: 1, md: 1 }} py={15} spacing={10}>
-                <Flex pr={15}>
-                  <ProfileSkills />
-                </Flex>
+            <Flex pr={15}>
+              <Heading>Current Stack:</Heading>
+            </Flex>
+            <Flex justify={'center'}>
+              <ProfileSkills />
+            </Flex>
             </SimpleGrid>
           </Container>
           <Flex justifyContent={'center'} pb={30}>
