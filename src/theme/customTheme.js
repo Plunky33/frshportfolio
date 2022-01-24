@@ -10,7 +10,7 @@ const fonts = {
   mono: `Blackout Sunrise, -apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol"`
 }
 
-// declare a variable for our theme and pass our overrides in the e`xtendTheme` method from chakra
+// declare a variable for our theme and pass our overrides in the `extendTheme` method from chakra
 const overrides = {
   fonts
 }

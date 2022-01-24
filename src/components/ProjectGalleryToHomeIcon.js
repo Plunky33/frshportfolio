@@ -31,7 +31,7 @@ export default function ProjectGalleryToHomeIcon() {
 				  	  fontWeight="700"
 					//   size='xl'
 					  fontSize='70px'
-					  mt={4} mb={-6}
+					  mt={4} mb={-7}
 					  pl={[14, 14, 14, 2, 2]}
 				>
 					  Recent Projects</Text>
