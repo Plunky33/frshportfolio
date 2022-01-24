@@ -18,8 +18,9 @@ import NextLink from 'next/link';
 import { motion } from 'framer-motion';
 import { profilePageData } from '../src/data/profilePageData';
 import * as icons from 'react-icons/si';
-import Layout from '../src/components/Layout';
 
+const ProfileSkills = dynamic(() => import('../src/components/ProfileSkills'))
+const Layout = dynamic(() => import('../src/components/Layout'))
 const ProjectDetailToHomeIcon = dynamic(() => import('../src/components/ProjectDetailToHomeIcon'))
 
 const MotionBox = motion(Box)
@@ -80,7 +81,7 @@ export default function ProfilePage() {
                 <Text color={'gray.500'} fontSize={'lg'}>
                 Current stack:
                 </Text>
-                <Stack
+                {/* <Stack
                   spacing={4}
                   divider={
                     <StackDivider
@@ -127,19 +128,19 @@ export default function ProfilePage() {
                     iconBg={useColorModeValue('purple.100', 'purple.900')}
                     text={'Node'}
                   />
-                </Stack>
+                </Stack> */}
               </Stack>
-              <Flex>
+              <Flex pt={15}>
                 <Image
                   rounded={'md'}
                   alt={'feature image'}
-                  src={
-                    'https://images.unsplash.com/photo-1554200876-56c2f25224fa?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80'
-                  }
+                  src={project.img}
                   objectFit={'cover'}
+                  boxSize={'400px'}
                 />
               </Flex>
             </SimpleGrid>
+            <ProfileSkills />
           </Container>
           <Flex justifyContent={'center'} pb={30}>
             <NextLink href='/' passHref>
