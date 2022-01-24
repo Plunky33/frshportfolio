@@ -10,7 +10,9 @@ export default function Layout({title, keywords, description, children}) {
                 <meta name="description" content={description}></meta>
                 <meta name="keywords" content={keywords}></meta>
                 <meta name='language' content='EN'></meta>
-                <link rel="canonical" href="<URL HERE>" />
+                <link rel="canonical" href="" />
+                <meta name='viewport' content='width=device-width, initial-scale=1' />
+                <meta charSet='utf-8' />
                 <meta name="robots" content="all" />
                 <meta name="twitter:card" content="summary" />
                 <meta name="twitter:site" content="@johnmilner33" />
