@@ -12,11 +12,12 @@ const Feature = ({ title, text, icon }) => {
         color={'white'}
         rounded={'full'}
         bg={'gray.100'}
-        mb={1}>
+        mb={1}
+        >
         {icon}
       </Flex>
       <Text fontWeight={600}>{title}</Text>
-      <Text color={'gray.600'}>{text}</Text>
+      <Text pr={9} color={'gray.600'}>{text}</Text>
     </Stack>
   );
 };
