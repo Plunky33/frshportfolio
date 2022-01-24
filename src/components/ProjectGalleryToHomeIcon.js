@@ -34,7 +34,7 @@ export default function ProjectGalleryToHomeIcon() {
 					  mt={4} mb={-6}
 					  pl={[14, 14, 14, 2, 2]}
 				>
-					  Projects</Text>
+					  Recent Projects</Text>
 				<IconButton onClick={toggleButton}>
 					<ChevronIcon />
 				</IconButton>
