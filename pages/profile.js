@@ -9,6 +9,8 @@ import {
     Link,
     Text,
     Stack,
+    Center,
+    VStack,
     StackDivider,
     Icon,
     useColorModeValue,
@@ -83,16 +85,21 @@ export default function ProfilePage() {
             </SimpleGrid>
           </Container>
           <Container maxW={'5xl'}>
-          <SimpleGrid columns={{ base: 1, md: 1 }} py={15} spacing={10}>
-            <Flex pr={15}>
-              <Heading>Current Stack:</Heading>
-            </Flex>
-            <Flex justify={'center'}>
-              <ProfileSkills />
-            </Flex>
-            </SimpleGrid>
+              <VStack
+                divider={<StackDivider borderColor='gray.200' />}
+                spacing={4}
+                align='stretch'
+                justifyContent='center'
+              >
+                <Box>
+                  <Heading>Current Stack:</Heading>
+                </Box>
+                <Box>
+                  <ProfileSkills />
+                </Box>
+              </VStack>
           </Container>
-          <Flex justifyContent={'center'} pb={30}>
+          <Flex justifyContent={'center'} pt={50} pb={50}>
             <NextLink href='/' passHref>
               <Link>
                 <ProjectDetailToHomeIcon />

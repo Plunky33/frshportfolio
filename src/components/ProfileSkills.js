@@ -18,7 +18,7 @@ const Feature = ({ title, text, icon }) => {
         {icon}
       </Flex>
       <Text fontWeight={600}>{title}</Text>
-      <Text pr={9} color={'gray.600'}>{text}</Text>
+      <Text color={'gray.600'}>{text}</Text>
     </Stack>
   );
 };
@@ -33,7 +33,7 @@ export default function ProfileSkills() {
     const iconsix = icons[`${project.iconsix}`]
 
   return (
-    <Box p={4}>
+    <Box p={4} ml={-3}>
       <SimpleGrid columns={{ base: 1, md: 3 }} spacing={10}>
         <Feature
           icon={<Icon as={iconone} w={10} h={10} />}
