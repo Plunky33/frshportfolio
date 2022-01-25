@@ -25,22 +25,22 @@ const ProjectDetailToHomeIcon = dynamic(() => import('../src/components/ProjectD
 
 const MotionBox = motion(Box)
 
-const Feature = ({ text, icon, iconBg }) => {
-  return (
-    <Stack direction={'row'} align={'center'}>
-      <Flex
-        w={8}
-        h={8}
-        align={'center'}
-        justify={'center'}
-        rounded={'full'}
-        bg={iconBg}>
-        {icon}
-      </Flex>
-      <Text fontWeight={600}>{text}</Text>
-    </Stack>
-  );
-};
+// const Feature = ({ text, icon, iconBg }) => {
+//   return (
+//     <Stack direction={'row'} align={'center'}>
+//       <Flex
+//         w={8}
+//         h={8}
+//         align={'center'}
+//         justify={'center'}
+//         rounded={'full'}
+//         bg={iconBg}>
+//         {icon}
+//       </Flex>
+//       <Text fontWeight={600}>{text}</Text>
+//     </Stack>
+//   );
+// };
 
 export default function ProfilePage() {
   const project = profilePageData[0]

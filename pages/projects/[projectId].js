@@ -3,7 +3,6 @@ import {
   Container,
   SimpleGrid,
   Box,
-  useMediaQuery,
   Link,
   Image,
   Flex,
@@ -17,7 +16,6 @@ import {
 import {
   AiOutlineLink
 } from 'react-icons/ai';
-// import { ReactElement } from 'react';
 import { motion } from 'framer-motion';
 import { useButtonUpdate } from '../../context/ButtonContext';
 import NextLink from 'next/link';
@@ -47,7 +45,6 @@ const Feature = ({ text, icon, iconBg}) => {
 
 export default function ProjectPage({project, gallery}) {
 	const toggleButton = useButtonUpdate();
-  // const [isSmallerScreen] = useMediaQuery("(max-width: 768px)");
   const iconone = icons[`${project.iconone}`]
   const icontwo = icons[`${project.icontwo}`]
   const iconthree = icons[`${project.iconthree}`]
@@ -183,7 +180,7 @@ export async function getStaticPaths() {
       }
     }
   });
-  console.log(paths)
+  // console.log(paths)
   return {
     paths,
     fallback: false

@@ -5,7 +5,7 @@ import "@fontsource/ibm-plex-sans/700.css"
 
 import NextNProgress from 'nextjs-progressbar';
 import { AnimatePresence } from 'framer-motion';
-import { ChakraProvider, extendTheme, ColorModeScript } from '@chakra-ui/react';
+import { ChakraProvider, ColorModeScript } from '@chakra-ui/react';
 import { ButtonProvider } from '../context/ButtonContext'
 import customTheme from '../src/theme/customTheme'
 

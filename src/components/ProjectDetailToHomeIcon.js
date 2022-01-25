@@ -1,19 +1,10 @@
 import dynamic from "next/dynamic";
 import { Box, Flex, Text } from '@chakra-ui/react';
-import styled from 'styled-components';
 import { motion } from 'framer-motion';
 
 const ChevronIcon = dynamic(() => import('./ChevronIcon'))
 
-
 const MotionBox = motion(Box);
-
-const IconButton = styled.div`
-	cursor: pointer;
-	display: flex;
-	justify-content: flex-end;
-	padding-bottom: 0.25rem;
-`
 
 export default function ProjectDetailToHomeIcon() {
 	return (
@@ -25,9 +16,9 @@ export default function ProjectDetailToHomeIcon() {
         transition={{ duration: 1.3 }}
       >
 		  	<Box sx={{display: 'flex', justifyContent: 'space-between', alignItems: 'flex-end'}}>
-				<IconButton>
+				<Flex justifyContent={'flex-end'} pb={3}>
 					<ChevronIcon />
-				</IconButton>
+				</Flex>
 			</Box>
 	  </MotionBox>
 	)

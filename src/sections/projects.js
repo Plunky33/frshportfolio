@@ -49,7 +49,7 @@ const GridItem = () => {
               _hover={{ bg: hovColor }}
               _focus={{ boxShadow: "outline" }}
               w="100%"
-              // h="200px"
+              //h="200px"
               borderRadius="xl"
               mb={2}
               p={4}

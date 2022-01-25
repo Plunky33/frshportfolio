@@ -29,7 +29,7 @@ export default function ProjectGalleryToHomeIcon() {
 		  	<Flex justifyContent='space-between' alignItems='flex-end' pr={[12, 12, 12, 0, 0]}>
 			  	<Text fontFamily="heading"
 				  	  fontWeight="700"
-					//   size='xl'
+					  //size='xl'
 					  fontSize='70px'
 					  mt={4} mb={-7}
 					  pl={[14, 14, 14, 2, 2]}

@@ -2,7 +2,7 @@ import React from 'react';
 import { useSpring } from 'react-spring';
 import { usePrefersReducedMotion } from './usePrefersReducedMotion';
 
-// boopConfig defaults
+// boop config defaults
 function useBoop({
   x = 3,
   y = 1,

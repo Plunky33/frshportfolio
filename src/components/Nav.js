@@ -1,9 +1,9 @@
-// import { ReactNode } from 'react';
 import NextLink from 'next/link';
 import {
   Box,
   Flex,
   Avatar,
+  Text,
   Link,
   Image,
   Button,
@@ -44,7 +44,9 @@ export default function Nav() {
       <Box bg={useColorModeValue('gray.100', 'gray.900')} px={10}>
         <Flex h={16} alignItems={'center'} justifyContent={'space-between'}>
           <NextLink href={`/`} passHref>
-              <Link pl={1}>Home</Link>
+              <Link pl={1}>
+                <Text fontFamily='body'>Home</Text>
+              </Link>
           </NextLink>
 
           <Flex alignItems={'center'}>
@@ -65,12 +67,6 @@ export default function Nav() {
                   minW={0}
                   aria-label="Menu Button for Profile Menu"
                   >
-                  {/* <Image alt="John Milner Profile Photo">
-                    <Avatar
-                      size={'sm'}
-                      src={ProfilePic}
-                    />
-                  </Image> */}
                   <Image
                     borderRadius='full'
                     boxSize='35px'
@@ -81,12 +77,6 @@ export default function Nav() {
                 <MenuList alignItems={'center'}>
                   <br />
                   <Center>
-                    {/* <Image alt="John Milner Profile Photo">
-                      <Avatar
-                        size={'2xl'}
-                        src={ProfilePic}
-                      />
-                    </Image> */}
                     <Image
                       borderRadius='full'
                       boxSize='120px'
