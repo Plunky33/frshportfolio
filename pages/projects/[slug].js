@@ -172,29 +172,23 @@ export default function ProjectPage({project, gallery}) {
 
 export async function getStaticPaths() {
   const projects = projectData;
-  const paths = projects.map(project => {
-    const projectId = project.slug.toLowerCase().replace(/ /g, '-');
-    return {
-      params: {
-        projectId: projectId.toString()
-      }
-    }
-  });
-  // console.log(paths)
+  const paths = projects.map(project => ({
+    params: {slug: project.slug.toLowerCase().toString()}
+  }))
+  console.log(paths)
   return {
     paths,
     fallback: false
   }
 }
 
-export async function getStaticProps({ params }) {
-  const projectId = params.projectId.replace(/\-/g, '+')
-  const results = projectData;
-  const result = results.find(x => x.slug === projectId)
-  const gallery = results.filter(x => x.slug !== projectId)
+export async function getStaticProps({ params: { slug } }) {
+  const projects = projectData;
+  const project = projects.find(x => x.slug === slug)
+  const gallery = projects.filter(x => x.slug !== slug)
   return {
     props: {
-      project: result,
+      project,
       gallery
     }
   }
