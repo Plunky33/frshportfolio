@@ -66,6 +66,8 @@ export default function Nav() {
                   <Image
                     borderRadius="full"
                     boxSize="35px"
+                    width="35px"
+                    height="35px"
                     src={ProfilePic}
                     alt="John Milner Profile Photo"
                   />
@@ -76,6 +78,8 @@ export default function Nav() {
                     <Image
                       borderRadius="full"
                       boxSize="120px"
+                      width="120px"
+                      height="120px"
                       src={ProfilePic}
                       alt="John Milner Profile Photo"
                     />

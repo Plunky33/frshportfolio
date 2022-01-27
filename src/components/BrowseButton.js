@@ -13,7 +13,7 @@ export default function BrowseButton(props) {
       transition={{ duration: 0.75 }}
     >
       <Flex direction="column" justifyContent="center" alignItems="center">
-        <Button colorScheme="blue" size="lg" onClick={props.toggleButton}>
+        <Button colorScheme="teal" size="lg" onClick={props.toggleButton}>
           Browse Projects
         </Button>
       </Flex>
