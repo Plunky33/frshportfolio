@@ -14,7 +14,7 @@ const Feature = ({ title, text, icon }) => {
         rounded={'full'}
         bg={'gray.100'}
         mb={1}
-        >
+      >
         {icon}
       </Flex>
       <Text fontWeight={600}>{title}</Text>
@@ -24,13 +24,13 @@ const Feature = ({ title, text, icon }) => {
 };
 
 export default function ProfileSkills() {
-    const project = profilePageData[0]
-    const iconone = icons[`${project.iconone}`]
-    const icontwo = icons[`${project.icontwo}`]
-    const iconthree = icons[`${project.iconthree}`]
-    const iconfour = icons[`${project.iconfour}`]
-    const iconfive = icons[`${project.iconfive}`]
-    const iconsix = icons[`${project.iconsix}`]
+  const project = profilePageData[0];
+  const iconone = icons[`${project.iconone}`];
+  const icontwo = icons[`${project.icontwo}`];
+  const iconthree = icons[`${project.iconthree}`];
+  const iconfour = icons[`${project.iconfour}`];
+  const iconfive = icons[`${project.iconfive}`];
+  const iconsix = icons[`${project.iconsix}`];
 
   return (
     <Box p={4} ml={-3}>

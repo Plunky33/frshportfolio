@@ -1,4 +1,4 @@
-import dynamic from "next/dynamic";
+import dynamic from 'next/dynamic';
 import {
   Container,
   SimpleGrid,
@@ -13,9 +13,7 @@ import {
   Icon,
   useColorModeValue,
 } from '@chakra-ui/react';
-import {
-  AiOutlineLink
-} from 'react-icons/ai';
+import { AiOutlineLink } from 'react-icons/ai';
 import { motion } from 'framer-motion';
 import { useButtonUpdate } from '../../context/ButtonContext';
 import NextLink from 'next/link';
@@ -23,10 +21,12 @@ import { projectData } from '../../src/data/projectData';
 import * as icons from 'react-icons/si';
 import Layout from '../../src/components/Layout';
 
-const ProjectDetailToHomeIcon = dynamic(() => import('../../src/components/ProjectDetailToHomeIcon'))
-const MotionBox = motion(Box)
+const ProjectDetailToHomeIcon = dynamic(() =>
+  import('../../src/components/ProjectDetailToHomeIcon'),
+);
+const MotionBox = motion(Box);
 
-const Feature = ({ text, icon, iconBg}) => {
+const Feature = ({ text, icon, iconBg }) => {
   return (
     <Stack direction={'row'} align={'center'}>
       <Flex
@@ -35,7 +35,8 @@ const Feature = ({ text, icon, iconBg}) => {
         align={'center'}
         justify={'center'}
         rounded={'full'}
-        bg={iconBg}>
+        bg={iconBg}
+      >
         {icon}
       </Flex>
       <Text fontWeight={600}>{text}</Text>
@@ -43,106 +44,157 @@ const Feature = ({ text, icon, iconBg}) => {
   );
 };
 
-export default function ProjectPage({project, gallery}) {
-	const toggleButton = useButtonUpdate();
-  const iconone = icons[`${project.iconone}`]
-  const icontwo = icons[`${project.icontwo}`]
-  const iconthree = icons[`${project.iconthree}`]
+export default function ProjectPage({ project, gallery }) {
+  // const toggleButton = useButtonUpdate();
+  const iconone = icons[`${project.iconone}`];
+  const icontwo = icons[`${project.icontwo}`];
+  const iconthree = icons[`${project.iconthree}`];
   return (
     <Layout>
       <MotionBox
-            initial={{ opacity: 0}}
-            animate={{  opacity: 1 }}
-            exit={{ opacity: 0}}
-            transition={{duration: 1.5}}
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        exit={{ opacity: 0 }}
+        transition={{ duration: 1.5 }}
       >
-      <Container maxW={'5xl'} py={6} p={[6, 8, 6, 8]}>
-        <SimpleGrid columns={{ base: 1, md: 2 }} spacing={10}>
-          <Stack spacing={4}>
-            <Text
-              textTransform={'uppercase'}
-              color={'blue.400'}
-              fontWeight={600}
-              fontSize={'sm'}
-              bg={useColorModeValue('blue.50', 'blue.900')}
-              p={2}
-              alignSelf={'flex-start'}
-              rounded={'md'}>
-              Project Overview
-            </Text>
-            <Heading fontFamily="Open Sans">{project.title}</Heading>
-            <Text
-              _hover={{ color: "purple.500" }}
-              _focus={{ boxShadow: "outline" }}
-              color={'gray.500'}
-              fontSize={'lg'}
-            >
-              <NextLink
-                href={project.link}
-                passHref
+        <Container maxW={'5xl'} py={6} p={[6, 8, 6, 8]}>
+          <SimpleGrid columns={{ base: 1, md: 2 }} spacing={10}>
+            <Stack spacing={4}>
+              <Text
+                textTransform={'uppercase'}
+                color={'blue.400'}
+                fontWeight={600}
+                fontSize={'sm'}
+                bg={useColorModeValue('blue.50', 'blue.900')}
+                p={2}
+                alignSelf={'flex-start'}
+                rounded={'md'}
               >
-                <a target="_blank">
-                  {project.subtitle}<Icon as={AiOutlineLink} color={'purple.500'} ml={-1} mb={-1} pt={3} w={8} h={8} />
-                </a>
-              </NextLink>
-            </Text>
-            <Stack
-              spacing={4}
-              divider={
-                <StackDivider
-                  borderColor={useColorModeValue('gray.100', 'gray.700')}
-                />
-              }>
-              <Feature
-                icon={<Icon as={iconone} color={'green.500'} w={5} h={5} />}
-                iconBg={useColorModeValue('yellow.100', 'yellow.900')}
-                text={project.featureone}
-              />
-              <Feature
-                icon={<Icon as={icontwo} color={'green.500'} w={5} h={5} />}
-                iconBg={useColorModeValue('green.100', 'green.900')}
-                text={project.featuretwo}
-              />
-              <Feature
-                icon={
-                  <Icon as={iconthree} color={'purple.500'} w={5} h={5} />
+                Project Overview
+              </Text>
+              <Heading fontFamily="Open Sans">
+                {project.title}
+              </Heading>
+              <Text
+                _hover={{ color: 'purple.500' }}
+                _focus={{ boxShadow: 'outline' }}
+                color={'gray.500'}
+                fontSize={'lg'}
+              >
+                <NextLink href={project.link} passHref>
+                  <a target="_blank">
+                    {project.subtitle}
+                    <Icon
+                      as={AiOutlineLink}
+                      color={'purple.500'}
+                      ml={-1}
+                      mb={-1}
+                      pt={3}
+                      w={8}
+                      h={8}
+                    />
+                  </a>
+                </NextLink>
+              </Text>
+              <Stack
+                spacing={4}
+                divider={
+                  <StackDivider
+                    borderColor={useColorModeValue(
+                      'gray.100',
+                      'gray.700',
+                    )}
+                  />
                 }
-                iconBg={useColorModeValue('purple.100', 'purple.900')}
-                text={project.featurethree}
-              />
+              >
+                <Feature
+                  icon={
+                    <Icon
+                      as={iconone}
+                      color={'green.500'}
+                      w={5}
+                      h={5}
+                    />
+                  }
+                  iconBg={useColorModeValue(
+                    'yellow.100',
+                    'yellow.900',
+                  )}
+                  text={project.featureone}
+                />
+                <Feature
+                  icon={
+                    <Icon
+                      as={icontwo}
+                      color={'green.500'}
+                      w={5}
+                      h={5}
+                    />
+                  }
+                  iconBg={useColorModeValue('green.100', 'green.900')}
+                  text={project.featuretwo}
+                />
+                <Feature
+                  icon={
+                    <Icon
+                      as={iconthree}
+                      color={'purple.500'}
+                      w={5}
+                      h={5}
+                    />
+                  }
+                  iconBg={useColorModeValue(
+                    'purple.100',
+                    'purple.900',
+                  )}
+                  text={project.featurethree}
+                />
+              </Stack>
             </Stack>
-          </Stack>
-          <Flex>
-            <Image
-              rounded={'md'}
-              alt={'feature image'}
-              src={project.detailimg}
-              objectFit={'cover'}
-            />
-          </Flex>
-        </SimpleGrid>
-        <SimpleGrid columns={{ base: 1, md: 1 }} spacing={15} py={35}>
+            <Flex>
+              <Image
+                rounded={'md'}
+                alt={'feature image'}
+                src={project.detailimg}
+                objectFit={'cover'}
+              />
+            </Flex>
+          </SimpleGrid>
+          <SimpleGrid
+            columns={{ base: 1, md: 1 }}
+            spacing={15}
+            py={35}
+          >
             <Flex>
               <Text color={'gray.500'} fontSize={'lg'}>
                 {project.description}
               </Text>
             </Flex>
             <Flex>
-                <SimpleGrid minChildWidth='120px' spacing='40px' py={15}>
-                  {gallery.map((item, i) => (
-                    <MotionBox
-                      key={item.id}
-                      as={motion.div}
-                      initial={{ opacity: 0 }}
-                      animate={{ opacity: 1 }}
-                      exit={{ opacity: 0 }}
-                      transition={{ duration: 0.75, delay: i * 0.15 }}
+              <SimpleGrid
+                minChildWidth="120px"
+                spacing="40px"
+                py={15}
+              >
+                {gallery.map((item, i) => (
+                  <MotionBox
+                    key={item.id}
+                    as={motion.div}
+                    initial={{ opacity: 0 }}
+                    animate={{ opacity: 1 }}
+                    exit={{ opacity: 0 }}
+                    transition={{ duration: 0.75, delay: i * 0.15 }}
+                  >
+                    <NextLink
+                      href={`/projects/${encodeURIComponent(
+                        item.slug,
+                      )}`}
+                      passHref
                     >
-                    <NextLink href={`/projects/${encodeURIComponent(item.slug)}`} passHref>
                       <Image
-                        style={{cursor: 'pointer'}}
-                        _hover={{ bg: "blue.900" }}
-                        _focus={{ boxShadow: "outline" }}
+                        style={{ cursor: 'pointer' }}
+                        _hover={{ bg: 'blue.900' }}
+                        _focus={{ boxShadow: 'outline' }}
                         w="100%"
                         borderRadius="xl"
                         mb={2}
@@ -151,13 +203,13 @@ export default function ProjectPage({project, gallery}) {
                         src={item.detailimg}
                         alt="Alt"
                       />
-                      </NextLink>
-                    </MotionBox>
+                    </NextLink>
+                  </MotionBox>
                 ))}
-                </SimpleGrid>
+              </SimpleGrid>
             </Flex>
             <Flex justifyContent={'center'} mt={-5}>
-              <NextLink href='/' passHref>
+              <NextLink href="/" passHref>
                 <Link>
                   <ProjectDetailToHomeIcon />
                 </Link>
@@ -172,24 +224,24 @@ export default function ProjectPage({project, gallery}) {
 
 export async function getStaticPaths() {
   const projects = projectData;
-  const paths = projects.map(project => ({
-    params: {slug: project.slug.toLowerCase().toString()}
-  }))
-  console.log(paths)
+  const paths = projects.map((project) => ({
+    params: { slug: project.slug.toLowerCase().toString() },
+  }));
+  console.log(paths);
   return {
     paths,
-    fallback: false
-  }
+    fallback: false,
+  };
 }
 
 export async function getStaticProps({ params: { slug } }) {
   const projects = projectData;
-  const project = projects.find(x => x.slug === slug)
-  const gallery = projects.filter(x => x.slug !== slug)
+  const project = projects.find((x) => x.slug === slug);
+  const gallery = projects.filter((x) => x.slug !== slug);
   return {
     props: {
       project,
-      gallery
-    }
-  }
+      gallery,
+    },
+  };
 }

@@ -1,21 +1,21 @@
-import React, { useContext, useState } from "react";
+import React, { useContext, useState } from 'react';
 
-const ButtonContext = React.createContext()
-const ButtonUpdateContext = React.createContext()
+const ButtonContext = React.createContext();
+const ButtonUpdateContext = React.createContext();
 
 export function useButton() {
-  return useContext(ButtonContext)
+  return useContext(ButtonContext);
 }
 
 export function useButtonUpdate() {
-  return useContext(ButtonUpdateContext)
+  return useContext(ButtonUpdateContext);
 }
 
-export function ButtonProvider ({ children }) {
+export function ButtonProvider({ children }) {
   const [renderProjects, setRenderProjects] = useState(false);
 
   function toggleButton() {
-    setRenderProjects(prevRenderProjects => !prevRenderProjects);
+    setRenderProjects((prevRenderProjects) => !prevRenderProjects);
   }
 
   return (
@@ -24,5 +24,5 @@ export function ButtonProvider ({ children }) {
         {children}
       </ButtonUpdateContext.Provider>
     </ButtonContext.Provider>
-  )
+  );
 }
