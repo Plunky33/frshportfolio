@@ -65,7 +65,7 @@ export default function Nav() {
                 >
                   <Image
                     borderRadius="full"
-                    boxSize="35px"
+                    // boxSize="35px"
                     width="35px"
                     height="35px"
                     src={ProfilePic}
@@ -77,7 +77,7 @@ export default function Nav() {
                   <Center>
                     <Image
                       borderRadius="full"
-                      boxSize="120px"
+                      // boxSize="120px"
                       width="120px"
                       height="120px"
                       src={ProfilePic}
