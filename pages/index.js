@@ -3,9 +3,7 @@ import { Stack, Box } from '@chakra-ui/react';
 import { motion } from 'framer-motion';
 import Home from '../src/sections/home';
 
-const ProfileList = dynamic(() =>
-  import('../src/sections/profileList'),
-);
+const ProfileList = dynamic(() => import('../src/sections/profileList'));
 const Layout = dynamic(() => import('../src/components/Layout'));
 
 const MotionBox = motion(Box);
@@ -19,11 +17,7 @@ const IndexPage = () => {
         exit={{ opacity: 0 }}
         transition={{ duration: 1.5 }}
       >
-        <Stack
-          h="100vh"
-          direction={['column', 'column', 'column', 'row']}
-          spacing="50px"
-        >
+        <Stack h="100vh" direction={['column', 'column', 'column', 'row']} spacing="50px">
           <Box w={['100%', '100%', '100%', '50%']}>
             <ProfileList />
           </Box>

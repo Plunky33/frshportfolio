@@ -16,12 +16,7 @@ export default function NotFoundPage() {
           transition={{ duration: 1.5 }}
         >
           <Link href="/" passHref>
-            <Heading
-              fontFamily="mono"
-              size="lg"
-              fontSize="80px"
-              css={{ cursor: 'pointer' }}
-            >
+            <Heading fontFamily="mono" size="lg" fontSize="80px" css={{ cursor: 'pointer' }}>
               Page Not Found
             </Heading>
           </Link>

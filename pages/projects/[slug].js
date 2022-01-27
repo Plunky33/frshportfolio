@@ -29,14 +29,7 @@ const MotionBox = motion(Box);
 const Feature = ({ text, icon, iconBg }) => {
   return (
     <Stack direction={'row'} align={'center'}>
-      <Flex
-        w={8}
-        h={8}
-        align={'center'}
-        justify={'center'}
-        rounded={'full'}
-        bg={iconBg}
-      >
+      <Flex w={8} h={8} align={'center'} justify={'center'} rounded={'full'} bg={iconBg}>
         {icon}
       </Flex>
       <Text fontWeight={600}>{text}</Text>
@@ -72,9 +65,7 @@ export default function ProjectPage({ project, gallery }) {
               >
                 Project Overview
               </Text>
-              <Heading fontFamily="Open Sans">
-                {project.title}
-              </Heading>
+              <Heading fontFamily="Open Sans">{project.title}</Heading>
               <Text
                 _hover={{ color: 'purple.500' }}
                 _focus={{ boxShadow: 'outline' }}
@@ -98,55 +89,21 @@ export default function ProjectPage({ project, gallery }) {
               </Text>
               <Stack
                 spacing={4}
-                divider={
-                  <StackDivider
-                    borderColor={useColorModeValue(
-                      'gray.100',
-                      'gray.700',
-                    )}
-                  />
-                }
+                divider={<StackDivider borderColor={useColorModeValue('gray.100', 'gray.700')} />}
               >
                 <Feature
-                  icon={
-                    <Icon
-                      as={iconone}
-                      color={'green.500'}
-                      w={5}
-                      h={5}
-                    />
-                  }
-                  iconBg={useColorModeValue(
-                    'yellow.100',
-                    'yellow.900',
-                  )}
+                  icon={<Icon as={iconone} color={'green.500'} w={5} h={5} />}
+                  iconBg={useColorModeValue('yellow.100', 'yellow.900')}
                   text={project.featureone}
                 />
                 <Feature
-                  icon={
-                    <Icon
-                      as={icontwo}
-                      color={'green.500'}
-                      w={5}
-                      h={5}
-                    />
-                  }
+                  icon={<Icon as={icontwo} color={'green.500'} w={5} h={5} />}
                   iconBg={useColorModeValue('green.100', 'green.900')}
                   text={project.featuretwo}
                 />
                 <Feature
-                  icon={
-                    <Icon
-                      as={iconthree}
-                      color={'purple.500'}
-                      w={5}
-                      h={5}
-                    />
-                  }
-                  iconBg={useColorModeValue(
-                    'purple.100',
-                    'purple.900',
-                  )}
+                  icon={<Icon as={iconthree} color={'purple.500'} w={5} h={5} />}
+                  iconBg={useColorModeValue('purple.100', 'purple.900')}
                   text={project.featurethree}
                 />
               </Stack>
@@ -160,22 +117,14 @@ export default function ProjectPage({ project, gallery }) {
               />
             </Flex>
           </SimpleGrid>
-          <SimpleGrid
-            columns={{ base: 1, md: 1 }}
-            spacing={15}
-            py={35}
-          >
+          <SimpleGrid columns={{ base: 1, md: 1 }} spacing={15} py={35}>
             <Flex>
               <Text color={'gray.500'} fontSize={'lg'}>
                 {project.description}
               </Text>
             </Flex>
             <Flex>
-              <SimpleGrid
-                minChildWidth="120px"
-                spacing="40px"
-                py={15}
-              >
+              <SimpleGrid minChildWidth="120px" spacing="40px" py={15}>
                 {gallery.map((item, i) => (
                   <MotionBox
                     key={item.id}
@@ -185,12 +134,7 @@ export default function ProjectPage({ project, gallery }) {
                     exit={{ opacity: 0 }}
                     transition={{ duration: 0.75, delay: i * 0.15 }}
                   >
-                    <NextLink
-                      href={`/projects/${encodeURIComponent(
-                        item.slug,
-                      )}`}
-                      passHref
-                    >
+                    <NextLink href={`/projects/${encodeURIComponent(item.slug)}`} passHref>
                       <Image
                         style={{ cursor: 'pointer' }}
                         _hover={{ bg: 'blue.900' }}

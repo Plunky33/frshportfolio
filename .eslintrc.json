@@ -1,4 +1,7 @@
 {
-  "extends": ["next/babel"]
-}
-
+    "extends": ["airbnb", "prettier"],
+    "plugins": ["prettier"],
+    "rules": {
+      "prettier/prettier": ["error"]
+    }
+  }

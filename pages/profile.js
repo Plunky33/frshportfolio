@@ -17,13 +17,9 @@ import NextLink from 'next/link';
 import { motion } from 'framer-motion';
 import { profilePageData } from '../src/data/profilePageData';
 
-const ProfileSkills = dynamic(() =>
-  import('../src/components/ProfileSkills'),
-);
+const ProfileSkills = dynamic(() => import('../src/components/ProfileSkills'));
 const Layout = dynamic(() => import('../src/components/Layout'));
-const ProjectDetailToHomeIcon = dynamic(() =>
-  import('../src/components/ProjectDetailToHomeIcon'),
-);
+const ProjectDetailToHomeIcon = dynamic(() => import('../src/components/ProjectDetailToHomeIcon'));
 
 const MotionBox = motion(Box);
 
