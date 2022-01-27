@@ -1,3 +1,4 @@
+import dynamic from 'next/dynamic';
 import Link from 'next/link';
 import { Box, Flex, Heading } from '@chakra-ui/react';
 import { motion } from 'framer-motion';
