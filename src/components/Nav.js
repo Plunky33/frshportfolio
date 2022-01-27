@@ -18,7 +18,7 @@ import {
   Center,
 } from '@chakra-ui/react';
 import { MoonIcon, SunIcon } from '@chakra-ui/icons';
-const ProfilePic = require('../../public/assets/images/profile-web.png').default.src;
+const ProfilePic = require('../../public/assets/images/profile-web.webp').default.src;
 
 // const NavLink = ({ children }) => (
 //   <Link
