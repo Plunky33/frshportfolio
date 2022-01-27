@@ -1,19 +1,10 @@
-import { Box, Flex, Text } from '@chakra-ui/react';
 import dynamic from 'next/dynamic';
-import styled from 'styled-components';
+import { Box, Flex, Text } from '@chakra-ui/react';
 import { motion } from 'framer-motion';
 import { useButtonUpdate } from '../../context/ButtonContext';
-
 const ChevronIcon = dynamic(() => import('./ChevronIcon'));
 
 const MotionBox = motion(Box);
-
-const IconButton = styled.div`
-  cursor: pointer;
-  display: flex;
-  justify-content: flex-end;
-  padding-bottom: 0.25rem;
-`;
 
 export default function ProjectGalleryToHomeIcon() {
   const toggleButton = useButtonUpdate();
@@ -37,9 +28,9 @@ export default function ProjectGalleryToHomeIcon() {
         >
           Recent Projects
         </Text>
-        <IconButton onClick={toggleButton}>
+        <Flex justifyContent={'flex-end'} pb={2} sx={{ cursor: 'pointer' }} onClick={toggleButton}>
           <ChevronIcon />
-        </IconButton>
+        </Flex>
       </Flex>
     </MotionBox>
   );

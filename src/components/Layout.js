@@ -1,9 +1,8 @@
 import dynamic from 'next/dynamic';
 import Head from 'next/head';
-
-const Nav = dynamic(() => import('../../src/components/Nav'));
 import { Container } from '@chakra-ui/react';
 
+const Nav = dynamic(() => import('../../src/components/Nav'));
 export default function Layout({ title, keywords, description, children }) {
   return (
     <>

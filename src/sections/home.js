@@ -1,8 +1,6 @@
 import dynamic from 'next/dynamic';
-
-import { useButton, useButtonUpdate } from '../../context/ButtonContext';
 import { Box } from '@chakra-ui/react';
-
+import { useButton, useButtonUpdate } from '../../context/ButtonContext';
 const BrowseButton = dynamic(() => import('../components/BrowseButton'));
 const Projects = dynamic(() => import('./projects'));
 

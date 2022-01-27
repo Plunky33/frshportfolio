@@ -4,8 +4,8 @@ import '@fontsource/ibm-plex-sans/400.css';
 import '@fontsource/ibm-plex-sans/700.css';
 
 import NextNProgress from 'nextjs-progressbar';
-import { AnimatePresence } from 'framer-motion';
 import { ChakraProvider, ColorModeScript } from '@chakra-ui/react';
+import { AnimatePresence } from 'framer-motion';
 import { ButtonProvider } from '../context/ButtonContext';
 import customTheme from '../src/theme/customTheme';
 

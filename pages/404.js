@@ -1,7 +1,7 @@
 import Link from 'next/link';
-import Layout from '../src/components/Layout';
 import { Box, Flex, Heading } from '@chakra-ui/react';
 import { motion } from 'framer-motion';
+const Layout = dynamic(() => import('../src/components/Layout'));
 
 const MotionBox = motion(Box);
 

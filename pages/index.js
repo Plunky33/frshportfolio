@@ -1,8 +1,7 @@
 import dynamic from 'next/dynamic';
 import { Stack, Box } from '@chakra-ui/react';
 import { motion } from 'framer-motion';
-import Home from '../src/sections/home';
-
+const Home = dynamic(() => import('../src/sections/home'));
 const ProfileList = dynamic(() => import('../src/sections/profileList'));
 const Layout = dynamic(() => import('../src/components/Layout'));
 

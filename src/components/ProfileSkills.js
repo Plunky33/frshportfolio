@@ -1,6 +1,6 @@
 import { Box, SimpleGrid, Icon, Text, Stack, Flex } from '@chakra-ui/react';
-import { profilePageData } from '../../src/data/profilePageData';
 import * as icons from 'react-icons/si';
+import { profilePageData } from '../../src/data/profilePageData';
 
 const Feature = ({ title, text, icon }) => {
   return (

@@ -1,4 +1,3 @@
-import React from 'react';
 import { ArrowBackIcon } from '@chakra-ui/icons';
 import useBoop from '../hooks/useBoop';
 import { animated } from 'react-spring';

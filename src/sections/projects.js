@@ -2,9 +2,7 @@ import dynamic from 'next/dynamic';
 import Link from 'next/link';
 import { Box, Img, Grid, useColorModeValue } from '@chakra-ui/react';
 import { motion } from 'framer-motion';
-
 import { projectData } from '../data/projectData';
-
 const ProjectGalleryToHomeIcon = dynamic(() => import('../components/ProjectGalleryToHomeIcon'));
 
 const MotionBox = motion(Box);

@@ -1,4 +1,5 @@
 import dynamic from 'next/dynamic';
+import NextLink from 'next/link';
 import {
   Container,
   SimpleGrid,
@@ -13,17 +14,15 @@ import {
   Icon,
   useColorModeValue,
 } from '@chakra-ui/react';
-import { AiOutlineLink } from 'react-icons/ai';
 import { motion } from 'framer-motion';
-import { useButtonUpdate } from '../../context/ButtonContext';
-import NextLink from 'next/link';
-import { projectData } from '../../src/data/projectData';
+import { AiOutlineLink } from 'react-icons/ai';
 import * as icons from 'react-icons/si';
-import Layout from '../../src/components/Layout';
-
+import { projectData } from '../../src/data/projectData';
+const Layout = dynamic(() => import('../../src/components/Layout'));
 const ProjectDetailToHomeIcon = dynamic(() =>
   import('../../src/components/ProjectDetailToHomeIcon'),
 );
+
 const MotionBox = motion(Box);
 
 const Feature = ({ text, icon, iconBg }) => {
@@ -38,7 +37,6 @@ const Feature = ({ text, icon, iconBg }) => {
 };
 
 export default function ProjectPage({ project, gallery }) {
-  // const toggleButton = useButtonUpdate();
   const iconone = icons[`${project.iconone}`];
   const icontwo = icons[`${project.icontwo}`];
   const iconthree = icons[`${project.iconthree}`];
@@ -171,7 +169,7 @@ export async function getStaticPaths() {
   const paths = projects.map((project) => ({
     params: { slug: project.slug.toLowerCase().toString() },
   }));
-  console.log(paths);
+  // console.log(paths);
   return {
     paths,
     fallback: false,
