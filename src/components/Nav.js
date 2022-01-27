@@ -4,7 +4,7 @@ import {
   Flex,
   Text,
   Link,
-  Image,
+  Img,
   Button,
   Menu,
   MenuButton,
@@ -63,7 +63,7 @@ export default function Nav() {
                   minW={0}
                   aria-label="Menu Button for Profile Menu"
                 >
-                  <Image
+                  <Img
                     borderRadius="full"
                     boxSize="35px"
                     width={35}
@@ -75,7 +75,7 @@ export default function Nav() {
                 <MenuList alignItems={'center'}>
                   <br />
                   <Center>
-                    <Image
+                    <Img
                       borderRadius="full"
                       boxSize="120px"
                       width={120}
