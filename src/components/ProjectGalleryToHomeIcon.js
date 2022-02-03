@@ -25,6 +25,10 @@ export default function ProjectGalleryToHomeIcon() {
           mt={4}
           mb={-7}
           pl={[14, 14, 14, 2, 2]}
+          bgGradient="linear-gradient(
+            94.23deg
+            ,#5374fa 12.41%,#fd9179 52.55%,#ff6969 89.95%)"
+          bgClip="text"
         >
           Recent Projects
         </Text>

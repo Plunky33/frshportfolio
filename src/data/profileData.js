@@ -12,7 +12,7 @@ export const profileData = [
   {
     id: 3,
     name: 'summary',
-    desc: "\u{1F44B} I'm an analytical and creative frontend web developer with an interdisciplinary background in advertising, content production, and digital marketing",
+    desc: "\u{1F44B} I'm an creative, collaborative, and problem-solving frontend web developer with an interdisciplinary background in advertising, content production, and digital marketing",
   },
   {
     id: 4,

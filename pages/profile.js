@@ -66,7 +66,14 @@ export default function ProfilePage() {
                 >
                   Profile
                 </Text>
-                <Heading>{project.headerdesc}</Heading>
+                <Heading
+                  bgGradient="linear-gradient(
+                    94.23deg
+                    ,#5374fa 12.41%,#fd9179 52.55%,#ff6969 89.95%)"
+                  bgClip="text"
+                >
+                  {project.headerdesc}
+                </Heading>
                 <Text color={'gray.500'} fontSize={'lg'}>
                   {project.description}
                 </Text>
