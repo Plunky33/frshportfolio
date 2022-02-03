@@ -15,7 +15,7 @@ const App = ({ Component, pageProps }) => {
       <ChakraProvider theme={customTheme} resetCSS>
         <ColorModeScript />
         <ButtonProvider>
-          <NextNProgress color="#81E6D9" startPosition={0.3} />
+          <NextNProgress color="#5374fa" startPosition={0.3} />
           <Component {...pageProps} />
         </ButtonProvider>
       </ChakraProvider>

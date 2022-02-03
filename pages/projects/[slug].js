@@ -53,7 +53,7 @@ export default function ProjectPage({ project, gallery }) {
             <Stack spacing={4}>
               <Text
                 textTransform={'uppercase'}
-                color={'blue.400'}
+                color={'#5374fa'}
                 fontWeight={600}
                 fontSize={'sm'}
                 bg={useColorModeValue('blue.50', 'blue.900')}
@@ -65,7 +65,7 @@ export default function ProjectPage({ project, gallery }) {
               </Text>
               <Heading fontFamily="Open Sans">{project.title}</Heading>
               <Text
-                _hover={{ color: 'purple.500' }}
+                _hover={{ color: '#5374fa' }}
                 _focus={{ boxShadow: 'outline' }}
                 color={'gray.500'}
                 fontSize={'lg'}
@@ -73,15 +73,7 @@ export default function ProjectPage({ project, gallery }) {
                 <NextLink href={project.link} passHref>
                   <a target="_blank">
                     {project.subtitle}
-                    <Icon
-                      as={AiOutlineLink}
-                      color={'purple.500'}
-                      ml={-1}
-                      mb={-1}
-                      pt={3}
-                      w={8}
-                      h={8}
-                    />
+                    <Icon as={AiOutlineLink} color={'#5374fa'} ml={-1} mb={-1} pt={3} w={8} h={8} />
                   </a>
                 </NextLink>
               </Text>
