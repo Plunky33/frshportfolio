@@ -7,12 +7,12 @@ import NextNProgress from 'nextjs-progressbar';
 import { ChakraProvider, ColorModeScript } from '@chakra-ui/react';
 import { AnimatePresence } from 'framer-motion';
 import { ButtonProvider } from '../context/ButtonContext';
-import customTheme from '../src/theme/customTheme';
+import theme from '../src/theme/theme';
 
 const App = ({ Component, pageProps }) => {
   return (
     <AnimatePresence exitBeforeEnter>
-      <ChakraProvider theme={customTheme} resetCSS>
+      <ChakraProvider theme={theme} resetCSS>
         <ColorModeScript />
         <ButtonProvider>
           <NextNProgress color="#5374fa" startPosition={0.3} />
